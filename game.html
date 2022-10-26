@@ -17,6 +17,9 @@
     </audio>
 
     <!--    sound-->
+   
+
+    
     <canvas id="gameCanvas" width="900" height="720"></canvas>
     <!--    canvas box-->
     <script>
@@ -39,7 +42,7 @@
 
         var userName = '';
         while (userName == false || userName == null) {
-            userName = prompt('what do you want the name of your variant of covid to be?', 'delta') // asking for username
+            userName = prompt('what do you want the name of your rocket to be?', 'enterprise') // asking for username
             if (userName != null)
                 pass = true;
         }
@@ -51,11 +54,11 @@
         var pass = false;
 
         while (pass == false) { // until happy no exit loop}
-            difficulty = prompt('what COVID restrictions do you want?, level 2 (easy), level 3 (medium), level 4 (hard). state the level below', 'level 3');
+            difficulty = prompt('what space junk levels are you willing to navigate through?, level 2 (easy), level 3 (medium), level 4 (hard). state the level below', 'level 3');
             difficulty = difficulty.toLowerCase()
             if (difficulty == 'level 2' || difficulty == 'level 3' || difficulty == 'level 4') {
                 pass = true;
-                alert('you are COVID-19, rules is to use SPACEBAR to avoid COVID vaccination needles or you will be contained by jacinda, each set of needles you avoid will be 2 cases of COVID-19 you cause. cause as many as possible.                         press ok when you are ready')
+                alert('you are the captain of a starship navigating through various space rocks to get to your destination       you will enter space when you press ok....')
             }
             //            /asking for difficulty and alerting rules
         }
@@ -119,7 +122,7 @@
         var BGYpos = 0;
 
         var syringe = new Image();
-        syringe.src = 'syringe.png'  // img
+        syringe.src = 'rock1.png'  // img
 
         var images = [object, syringe];
 
@@ -157,7 +160,7 @@
                 moveEnemy();
             } else {
                 drawImgs(End, EndXpos, EndYpos, canvas.width, canvas.height);
-                colorText(  userName + ' caused ' + score + ' cases of COVID-19 during the outbreak, but we have eliminated it', 10, 600, '24px impact', 'white');   // if game has ended. for game end screen
+                colorText(  userName + ' avoided ' + score + ' space rocks but sadly could not break out of earths gravity', 30,30, '24px impact', 'white');   // if game has ended. for game end screen
             }
         } // end func
 
